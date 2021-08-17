@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="cmp49C7269770906AFCFEC5BE465693C132" Guid="{405C9176-8194-4502-B98C-8E82CBAE5932}">
+                <File Id="fil2715B2E4A8D7A2527E9EC1596CF4CCC2" KeyPath="yes" Source="$(var.BasePath)\HelloWorldApp.exe" />
+            </Component>
+            <Component Id="cmp8DD63B48C0CC44AECE96F0B601C05F68" Guid="{51F1EC36-A7CE-4DEB-B77E-0E4C7E116B3C}">
+                <File Id="fil401115A7AC6C065405336DD8F06B1A10" KeyPath="yes" Source="$(var.BasePath)\HelloWorldApp.pdb" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="PublishedComponents">
+            <ComponentRef Id="cmp49C7269770906AFCFEC5BE465693C132" />
+            <ComponentRef Id="cmp8DD63B48C0CC44AECE96F0B601C05F68" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>
